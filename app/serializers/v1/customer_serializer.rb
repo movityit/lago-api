@@ -84,6 +84,9 @@ module V1
       when :moneyhash
         configuration[:provider_customer_id] = model.moneyhash_customer&.provider_customer_id
         configuration.merge!(model.moneyhash_customer&.settings&.symbolize_keys || {})
+      when :sumup
+        configuration[:provider_customer_id] = model.sumup_customer&.provider_customer_id
+        configuration.merge!(model.sumup_customer&.settings&.symbolize_keys || {})
       end
 
       configuration

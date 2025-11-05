@@ -196,6 +196,8 @@ class Organization < ApplicationRecord
       cashfree_payment_provider
     when "adyen"
       adyen_payment_provider
+    when "sumup"
+      sumup_payment_provider
     end
   end
 

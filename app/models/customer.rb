@@ -211,6 +211,8 @@ class Customer < ApplicationRecord
       adyen_customer
     when :moneyhash
       moneyhash_customer
+    when :sumup
+      sumup_customer
     end
   end
 
