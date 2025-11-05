@@ -108,4 +108,11 @@ class WebhooksController < ApplicationController
 
     head(:ok)
   end
+
+  def sumup
+    # TODO: Implement SumUp webhook handling
+    # For now, accept webhooks and return OK
+    # A HandleIncomingWebhookService should be created similar to other providers
+    head(:ok)
+  end
 end

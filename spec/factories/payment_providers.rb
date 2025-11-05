@@ -120,4 +120,24 @@ FactoryBot.define do
       webhook_secret { SecureRandom.hex(32) }
     end
   end
+
+  factory :sumup_provider, class: "PaymentProviders::SumupProvider" do
+    organization
+    type { "PaymentProviders::SumupProvider" }
+    name { "Sumup" }
+    code { "sumup_#{SecureRandom.uuid}" }
+    secrets do
+      {api_key:, webhook_secret:}.to_json
+    end
+
+    settings do
+      {success_redirect_url:}
+    end
+
+    transient do
+      api_key { "sup_sk_#{SecureRandom.uuid}" }
+      success_redirect_url { Faker::Internet.url }
+      webhook_secret { SecureRandom.hex(32) }
+    end
+  end
 end

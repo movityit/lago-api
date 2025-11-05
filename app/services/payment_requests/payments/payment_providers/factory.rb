@@ -22,6 +22,8 @@ module PaymentRequests
             PaymentRequests::Payments::GocardlessService
           when "moneyhash"
             PaymentRequests::Payments::MoneyhashService
+          when "sumup"
+            PaymentRequests::Payments::SumupService
           else
             raise(NotImplementedError)
           end

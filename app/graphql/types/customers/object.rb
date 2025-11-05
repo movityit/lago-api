@@ -140,6 +140,8 @@ module Types
           object.adyen_customer
         when :moneyhash
           object.moneyhash_customer
+        when :sumup
+          object.sumup_customer
         end
       end
 

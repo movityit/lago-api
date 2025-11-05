@@ -50,6 +50,7 @@ module Types
       field :cashfree_payment_providers, [Types::PaymentProviders::Cashfree], permission: "organization:integrations:view"
       field :gocardless_payment_providers, [Types::PaymentProviders::Gocardless], permission: "organization:integrations:view"
       field :stripe_payment_providers, [Types::PaymentProviders::Stripe], permission: "organization:integrations:view"
+      field :sumup_payment_providers, [Types::PaymentProviders::Sumup], permission: "organization:integrations:view"
 
       field :applied_dunning_campaign, Types::DunningCampaigns::Object
       field :can_create_billing_entity, Boolean, null: false, method: :can_create_billing_entity?

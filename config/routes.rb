@@ -148,6 +148,7 @@ Rails.application.routes.draw do
     post "gocardless/:organization_id", to: "webhooks#gocardless", on: :collection, as: :gocardless
     post "adyen/:organization_id", to: "webhooks#adyen", on: :collection, as: :adyen
     post "moneyhash/:organization_id", to: "webhooks#moneyhash", on: :collection, as: :moneyhash
+    post "sumup/:organization_id", to: "webhooks#sumup", on: :collection, as: :sumup
   end
 
   namespace :admin do

@@ -60,6 +60,7 @@ module Types
     field :add_gocardless_payment_provider, mutation: Mutations::PaymentProviders::Gocardless::Create
     field :add_moneyhash_payment_provider, mutation: Mutations::PaymentProviders::Moneyhash::Create
     field :add_stripe_payment_provider, mutation: Mutations::PaymentProviders::Stripe::Create
+    field :add_sumup_payment_provider, mutation: Mutations::PaymentProviders::Sumup::Create
 
     field :update_adyen_payment_provider, mutation: Mutations::PaymentProviders::Adyen::Update
     field :update_cashfree_payment_provider, mutation: Mutations::PaymentProviders::Cashfree::Update
@@ -67,6 +68,7 @@ module Types
     field :update_gocardless_payment_provider, mutation: Mutations::PaymentProviders::Gocardless::Update
     field :update_moneyhash_payment_provider, mutation: Mutations::PaymentProviders::Moneyhash::Update
     field :update_stripe_payment_provider, mutation: Mutations::PaymentProviders::Stripe::Update
+    field :update_sumup_payment_provider, mutation: Mutations::PaymentProviders::Sumup::Update
 
     field :destroy_payment_provider, mutation: Mutations::PaymentProviders::Destroy
 
