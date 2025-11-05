@@ -95,8 +95,9 @@ class Customer < ApplicationRecord
   has_one :hubspot_customer, class_name: "IntegrationCustomers::HubspotCustomer"
   has_one :salesforce_customer, class_name: "IntegrationCustomers::SalesforceCustomer"
   has_one :moneyhash_customer, class_name: "PaymentProviderCustomers::MoneyhashCustomer"
+  has_one :sumup_customer, class_name: "PaymentProviderCustomers::SumupCustomer"
 
-  PAYMENT_PROVIDERS = %w[stripe gocardless cashfree adyen flutterwave moneyhash].freeze
+  PAYMENT_PROVIDERS = %w[stripe gocardless cashfree adyen flutterwave moneyhash sumup].freeze
 
   default_scope -> { kept }
   sequenced scope: ->(customer) { customer.organization.customers.with_discarded },

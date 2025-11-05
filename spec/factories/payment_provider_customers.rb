@@ -43,4 +43,12 @@ FactoryBot.define do
 
     provider_customer_id { SecureRandom.uuid }
   end
+
+  factory :sumup_customer, class: "PaymentProviderCustomers::SumupCustomer" do
+    customer
+    organization { customer.organization }
+    payment_provider { association(:sumup_provider, organization: organization) }
+
+    provider_customer_id { SecureRandom.uuid }
+  end
 end
